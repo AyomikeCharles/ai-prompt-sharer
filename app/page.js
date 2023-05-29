@@ -10,7 +10,8 @@ export default function Home() {
         <span className='text-blue-500 font-extrabold'>  AI-Powered Prompts</span>
       </h1>
       <p className='text-center text-blue-900/70'>
-        PromptSharer is an open-source AI prompting tool for modern world to discover, create and share creative ai prompts
+        PromptSharer is an open-source AI prompting tool for modern world to discover, create and share creative ai prompts. 
+        Remember to be as specific as possible in your prompts to get the most relevant and accurate responses from the AI
       </p>
       <Feed/>
     </main>
