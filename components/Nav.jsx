@@ -44,7 +44,7 @@ function Nav() {
                     <Link href='/create-prompt' className="bg-blue-500 text-white hover:text-blue-900/90 hover:bg-white border p-2 rounded-full">
                         Create post
                     </Link>
-                    <button type="button" onClick={signOut} className="bg-white text-blue-900/90 hover:text-white hover:bg-blue-500 transition duration-300 px-3 py-2 rounded-full">
+                    <button type="button" onClick={handleSignOut} className="bg-white text-blue-900/90 hover:text-white hover:bg-blue-500 transition duration-300 px-3 py-2 rounded-full">
                         Logout
                     </button>
 
