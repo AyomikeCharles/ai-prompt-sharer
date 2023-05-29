@@ -4,10 +4,14 @@ import Image from "next/image"
 import logo from '@public/logo.png'
 import { useState, useEffect } from "react"
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react'
+import { useRouter } from "next/navigation"
+
+
 function Nav() {
     const {data: session} = useSession()
     const [providers, setProviders] = useState(null)
     const [dropDown, setDropDown] = useState(false)
+    const router = useRouter()
 
     useEffect(()=>{
         const setProvider = async () => {
@@ -20,6 +24,7 @@ function Nav() {
     const handleSignOut = () => {
         signOut()
         setDropDown(false)
+        router.push('/')
     }
 
   return (
