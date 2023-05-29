@@ -16,6 +16,12 @@ function Nav() {
         }
         setProvider()
     }, [])
+
+    const handleSignOut = () => {
+        signOut()
+        setDropDown(false)
+    }
+
   return (
     <nav className="flex justify-between w-full py-4 px-10 shadow">
         <Link href='/'>
@@ -75,7 +81,7 @@ function Nav() {
                                     create prompt
                                 </Link>
                                 <hr className="my-1"/>
-                                <button type="button" onClick={()=>{signOut; setDropDown(false)}} className="text-white bg-blue-500 transition duration-300 px-3 py-2 my-2 rounded-full">
+                                <button type="button" onClick={handleSignOut} className="text-white bg-blue-500 transition duration-300 px-3 py-2 my-2 rounded-full">
                                     Logout
                                 </button>
                             </div>
