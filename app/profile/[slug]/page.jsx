@@ -21,7 +21,7 @@ function MyProfile({params}) {
   return (
     <Profile
         name={posts[0]?.creator?.username}
-        desc='welcome to your profile page'
+        desc={`welcome to ${posts[0]?.creator?.username} profile page`}
         data={posts}
         handleEdit={false}
         handleDelete={false}
