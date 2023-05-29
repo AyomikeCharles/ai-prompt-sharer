@@ -2,11 +2,11 @@ import Link from "next/link"
 
 function Form({type, post, setPost, submitting, handleSubmit }) {
   return (
-    <section className="w-full">
-      <h1>
+    <section className="px-3 md:px-10">
+      <h1 className="mt-10 font-bold text-blue-500 text-3xl">
         {type} Post
       </h1>
-      <p>
+      <p className="text-blue-900/70 my-3">
         {type} and share amazing prompt in the world and let your imagination run wild with AI powered platform
       </p>
       <form
@@ -15,7 +15,7 @@ function Form({type, post, setPost, submitting, handleSubmit }) {
 
         <div>
           <label>
-            <span>Your AI prompt</span>
+            <span className="text-blue-900/70">Your AI prompt</span>
           </label>
           <br/>
           <textarea
@@ -23,30 +23,30 @@ function Form({type, post, setPost, submitting, handleSubmit }) {
             onChange={(e)=>setPost({...post, prompt:e.target.value})}
             placeholder="Write Your Prompt Here"
             required
-            className="border"
+            className="shadow focus:outline-none w-full md:w-[400px] h-[250px] p-3 bg-gray-50 text-blue-900/50 rounded"
           />
         </div>
 
 
 
-        <div>
+        <div className="my-3">
           <label>
-            <span>Tag </span>
+            <span className="text-blue-900/70">Tag e.g #webdev, #food, #tech </span>
           </label>
           <br/>
           <input
             value={post.tag}
             onChange={(e)=>setPost({...post, tag:e.target.value})}
-            placeholder="#tag"
+            placeholder="tag"
             required
-            className="border"
+            className="shadow w-full text-blue-900/50 focus:outline-none rounded bg-gray-50 md:w-[400px] p-2"
           />
         </div>
-        <div className="">
-          <Link href='/'>
-            cancel
+        <div className="my-5">
+          <Link href='/' className="mx-3 text-red-500">
+            Cancel
           </Link>
-          <button type="submit" disabled={submitting}>
+          <button type="submit" disabled={submitting} className="shadow bg-blue-500 rounded-full text-white px-3 py-2">
             {submitting ? `${type}...`: type}
           </button>
         </div>
